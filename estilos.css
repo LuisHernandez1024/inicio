@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0; /* Reduce el espacio superior */
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centra la tabla */
+}
+
+thead th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+tbody td {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de acordeón */
+.accordion-button {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+/* Responsividad */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+
+    .accordion-button {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    table {
+        font-size: 0.8em;
+    }
+
+    .accordion-button {
+        font-size: 0.9em;
+    }
+}
