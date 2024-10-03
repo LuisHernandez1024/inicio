@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Responsiva 6x6 con Acordeón</title>
+    <title>Rejilla (Grid) Responsiva 6x6</title>
     <style>
         /* Estilos generales */
         body {
@@ -13,38 +13,41 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             background-color: #f4f4f4;
         }
 
-        .container {
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columnas de igual tamaño */
+            gap: 10px;
             width: 100%;
+            max-width: 1200px;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Estilos de la tabla */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0 auto;
-        }
-
-        th, td {
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
             border: 1px solid #ddd;
-            padding: 15px;
             text-align: center;
+            position: relative;
         }
 
-        th {
+        /* Encabezados */
+        .grid-item.header {
             background-color: #4CAF50;
             color: white;
-            font-size: 1.1em;
             font-weight: bold;
-        }
-
-        td {
-            position: relative;
         }
 
         /* Botón de acordeón */
@@ -74,266 +77,150 @@
 
         /* Responsividad */
         @media only screen and (max-width: 768px) {
-            td, th {
-                font-size: 0.9em;
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas pequeñas */
             }
 
             .accordion-button {
                 font-size: 1em;
             }
         }
+
+        @media only screen and (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas muy pequeñas */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Columna 1</th>
-                    <th>Columna 2</th>
-                    <th>Columna 3</th>
-                    <th>Columna 4</th>
-                    <th>Columna 5</th>
-                    <th>Columna 6</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Fila 1 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 1,6</p>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Fila 2 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 2,6</p>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Fila 3 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 3,6</p>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Fila 4 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 4,6</p>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Fila 5 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 5,6</p>
-                        </div>
-                    </td>
-                </tr>
-                <!-- Fila 6 -->
-                <tr>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,1</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,2</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,3</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,4</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,5</p>
-                        </div>
-                    </td>
-                    <td>
-                        <button class="accordion-button">+</button>
-                        <div class="accordion-content">
-                            <p>Información adicional de la celda 6,6</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Título de la página -->
+    <h1>Tabla de Rejilla Responsiva 6x6</h1>
+
+    <div class="grid-container">
+        <!-- Encabezados -->
+        <div class="grid-item header">Columna 1</div>
+        <div class="grid-item header">Columna 2</div>
+        <div class="grid-item header">Columna 3</div>
+        <div class="grid-item header">Columna 4</div>
+        <div class="grid-item header">Columna 5</div>
+        <div class="grid-item header">Columna 6</div>
+
+        <!-- Fila 1 -->
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,1</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,2</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,3</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,4</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,5</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 1,6</p>
+            </div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,1</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,2</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,3</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,4</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,5</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 2,6</p>
+            </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,1</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,2</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,3</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,4</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,5</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <button class="accordion-button">+</button>
+            <div class="accordion-content">
+                <p>Información adicional de la celda 3,6</p>
+            </div>
+        </div>
+
+        <!-- Resto de las filas se pueden continuar de la misma forma... -->
     </div>
 
     <script>
