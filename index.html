@@ -3,239 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rejilla (Grid) Responsiva 6x6</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 2em;
-            color: #333;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr); /* 6 columnas de igual tamaño */
-            gap: 10px;
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .grid-item {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            text-align: center;
-            position: relative;
-        }
-
-        /* Encabezados */
-        .grid-item.header {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Botón de acordeón */
-        .accordion-button {
-            background-color: #f1f1f1;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2em;
-            outline: none;
-        }
-
-        .accordion-content {
-            display: none;
-            padding: 10px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .accordion-content p {
-            margin: 0;
-        }
-
-        /* Responsividad */
-        @media only screen and (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas pequeñas */
-            }
-
-            .accordion-button {
-                font-size: 1em;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas muy pequeñas */
-            }
-        }
-    </style>
+    <title>Tabla Responsiva 4x12</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <!-- Título de la página -->
-    <h1>Tabla de Rejilla Responsiva 6x6</h1>
+    <h1>Referencias</h1>
 
-    <div class="grid-container">
+    <!-- Tabla -->
+    <table>
         <!-- Encabezados -->
-        <div class="grid-item header">Columna 1</div>
-        <div class="grid-item header">Columna 2</div>
-        <div class="grid-item header">Columna 3</div>
-        <div class="grid-item header">Columna 4</div>
-        <div class="grid-item header">Columna 5</div>
-        <div class="grid-item header">Columna 6</div>
+        <thead>
+            <tr>
+                <th>Inicio</th>
+                <th>Crypto</th>
+                <th>Crypto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas con enlaces y botones de acordeón -->
+            <tr>
+                <td>
+                    <a href="https://finviz.com/map.ashx?t=sec" target="_blank">S&P 500 Map</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 1,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://app.tokenmetrics.com/en" target="_blank">Fear & Greed Individual</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 1,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.coinglass.com/es/BitcoinOpenInterest" target="_blank">OPEN INTEREST</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 1,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 2 -->
+            <tr>
+                <td>
+                    <a href="https://www.fxstreet.es/calendario-economico" target="_blank">Calendario Finanzas</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 2,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.bitcoinmagazinepro.com/es/charts/mvrv-zscore/" target="_blank">BTC: Puntuación Z de MVRV</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 2,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://dune.com/cryptokoryo/crypto-buy-signal" target="_blank">CRYPTOBUY SIGNAL</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 2,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 3 -->
+            <tr>
+                <td>
+                    <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank">FedWatch</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 3,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.bitcoinmagazinepro.com/charts/200-week-moving-average-heatmap/" target="_blank">BTC200WeekMovingAverageHeatmap</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 3,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="PI CYCLE TOP INDICATOR" target="_blank">PI CYCLE TOP INDICATOR</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 3,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 4 -->
+            <tr>
+                <td>
+                    <a href="https://es.investing.com/economic-calendar/interest-rate-decision-168" target="_blank">DecisiónTiposDeInterés</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 4,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://cryptoquant.com/asset/btc/chart/network-indicator/nvt-golden-cross?sma=0&ema=0&priceScale=log&metricScale=linear&window=DAY&chartStyle=line" target="_blank">BTC: NVT Golden Cross</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 4,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://token.unlocks.app/" target="_blank">Token Unlocks</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 4,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 5 -->
+            <tr>
+                <td>
+                    <a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 5,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.bitcoinmagazinepro.com/es/charts/puell-multiple/" target="_blank">Bitcoin: El Puell Multiple</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 5,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.bitcoinmagazinepro.com/es/charts/global-liquidity/" target="_blank">LiquidezMundial(M2)FrenteAlPrecioDelBtc</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 5,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 6 -->
+            <tr>
+                <td>
+                    <a href="https://edition.cnn.com/markets/fear-and-greed" target="_blank">Fear & Greed Market</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 6,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.blockchaincenter.net/en/bitcoin-rainbow-chart/" target="_blank">BTC Rainbow Price Chart</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 6,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://bitcoinmonthlyreturn.com/" target="_blank">BTC Monthly Return</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 6,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 7 -->
+            <tr>
+                <td>
+                    <a href="https://coinmarketcap.com/" target="_blank">Fear & Greed 1 Grypto</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 7,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://dune.com/whale_hunter/dex-trading-bot-wars" target="_blank">DEX Trading Bot Wars</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 7,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.coinglass.com/today" target="_blank">BTC & ETH Quarterly returns(%)</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 7,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 8 -->
+            <tr>
+                <td>
+                    <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank">Fear & Greed 2 Crypto</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 8,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.blockchaincenter.net/en/altcoin-season-index/" target="_blank">Altcoin Season Index</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 8,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.coinglass.com/es/bitcoin-etf" target="_blank">BTC ETF Overview</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 8,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 9 -->
+            <tr>
+                <td>
+                    <a href="https://cryptobubbles.net/" target="_blank">CRYPTO BUBBLES</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 9,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.coinglass.com/pro/i/RsiHeatMap" target="_blank">Crypto Market RSI Heatmap</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 9,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://sosovalue.xyz/assets/etf/us-eth-spot" target="_blank">ETH ETF Overview</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 9,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 10 -->
+            <tr>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 3,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 10,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://cryptofees.info/" target="_blank">Crypto fees</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 10,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 11 -->
+            <tr>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 11,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 11,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 11,3</p>
+                    </div>
+                </td>
+            </tr>
+            <!-- Fila 12 -->
+            <tr>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 12,1</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 12,2</p>
+                    </div>
+                </td>
+                <td>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                    
+                    <button class="accordion-button">+</button>
+                    <div class="accordion-content">
+                        <p>Información adicional de la celda 12,3</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        <!-- Fila 1 -->
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,1</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,2</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,3</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,4</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,5</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 1,6</p>
-            </div>
-        </div>
-
-        <!-- Fila 2 -->
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,1</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,2</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,3</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,4</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,5</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 2,6</p>
-            </div>
-        </div>
-
-        <!-- Fila 3 -->
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,1</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,2</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,3</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,4</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,5</p>
-            </div>
-        </div>
-        <div class="grid-item">
-            <button class="accordion-button">+</button>
-            <div class="accordion-content">
-                <p>Información adicional de la celda 3,6</p>
-            </div>
-        </div>
-
-        <!-- Resto de las filas se pueden continuar de la misma forma... -->
-    </div>
-
-    <script>
-        // Funcionalidad de acordeón
-        document.querySelectorAll('.accordion-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        });
-    </script>
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="javascript.js"></script>
 </body>
 </html>
