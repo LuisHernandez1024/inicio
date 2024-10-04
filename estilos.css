@@ -55,6 +55,7 @@ a:hover {
     outline: none;
 }
 
+/* Estilo del contenido del acordeón */
 .accordion-content {
     display: none;
     padding: 10px;
@@ -62,7 +63,7 @@ a:hover {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #fff9c4; /* Color amarillo/crema pálido */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
